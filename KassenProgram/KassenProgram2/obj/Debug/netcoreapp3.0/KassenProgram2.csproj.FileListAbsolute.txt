@@ -1,0 +1,7 @@
+C:\Users\Moritz\Documents\repos\KassenProgram\KassenProgram\KassenProgram2\bin\Debug\netcoreapp3.0\KassenProgram2.exe
+C:\Users\Moritz\Documents\repos\KassenProgram\KassenProgram\KassenProgram2\obj\Debug\netcoreapp3.0\KassenProgram2.csprojAssemblyReference.cache
+C:\Users\Moritz\Documents\repos\KassenProgram\KassenProgram\KassenProgram2\obj\Debug\netcoreapp3.0\KassenProgram2.AssemblyInfoInputs.cache
+C:\Users\Moritz\Documents\repos\KassenProgram\KassenProgram\KassenProgram2\obj\Debug\netcoreapp3.0\KassenProgram2.AssemblyInfo.cs
+C:\Users\Moritz\Documents\repos\KassenProgram\KassenProgram\KassenProgram2\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\Moritz\Documents\repos\KassenProgram\KassenProgram\KassenProgram2\obj\Debug\netcoreapp3.0\KassenProgram2.csproj.CopyComplete
+C:\Users\Moritz\Documents\repos\KassenProgram\KassenProgram\KassenProgram2\bin\Debug\netcoreapp3.0\Ini.Net.dll

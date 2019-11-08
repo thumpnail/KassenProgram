@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{58EFA451-BE67-4392-976C-B945DA410AC1}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KassenProgram/Program.cs">
+    <Files>
+      <File FileName="KassenProgram/Program.cs" Line="24" Column="51" />
+      <File FileName="KassenProgram/FileHandler.json.cs" Line="13" Column="47" />
+      <File FileName="KassenProgram/gui.cs" Line="5" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="KassenProgram" expanded="True">
+            <Node name="KassenProgram" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.KassenProgram PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
