@@ -35,6 +35,7 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.checkBoxEdvanced = new System.Windows.Forms.CheckBox();
+            this.productMWST = new System.Windows.Forms.TextBox();
             // 
             // generateID
             // 
@@ -91,7 +92,7 @@
             this.productPrize.Location = new System.Drawing.Point(4, 171);
             this.productPrize.Name = "productPrize";
             this.productPrize.PlaceholderText = "Prize";
-            this.productPrize.Size = new System.Drawing.Size(148, 27);
+            this.productPrize.Size = new System.Drawing.Size(70, 27);
             this.productPrize.TabIndex = 7;
             // 
             // productDescription
@@ -141,6 +142,14 @@
             this.checkBoxEdvanced.UseVisualStyleBackColor = true;
             this.checkBoxEdvanced.CheckedChanged += new System.EventHandler(this.checkBoxEdvanced_CheckedChanged);
             // 
+            // productMWST
+            // 
+            this.productMWST.Location = new System.Drawing.Point(82, 171);
+            this.productMWST.Name = "productMWST";
+            this.productMWST.PlaceholderText = "MWST";
+            this.productMWST.Size = new System.Drawing.Size(70, 27);
+            this.productMWST.TabIndex = 13;
+            // 
             // AddProductForm
             // 
             this.AcceptButton = this.buttonSave;
@@ -148,6 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(415, 236);
+            this.Controls.Add(this.productMWST);
             this.Controls.Add(this.checkBoxEdvanced);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
@@ -182,5 +192,6 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.CheckBox checkBoxEdvanced;
+        private System.Windows.Forms.TextBox productMWST;
     }
 }

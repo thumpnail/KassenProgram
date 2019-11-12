@@ -40,6 +40,7 @@
             this.labelExpDate = new System.Windows.Forms.Label();
             this.labelDateAdded = new System.Windows.Forms.Label();
             this.addedDate = new System.Windows.Forms.DateTimePicker();
+            this.productMWST = new System.Windows.Forms.TextBox();
             // 
             // checkBoxEnableAdvanced
             // 
@@ -93,7 +94,7 @@
             this.productPrize.Location = new System.Drawing.Point(5, 171);
             this.productPrize.Name = "productPrize";
             this.productPrize.PlaceholderText = "Prize";
-            this.productPrize.Size = new System.Drawing.Size(148, 27);
+            this.productPrize.Size = new System.Drawing.Size(70, 27);
             this.productPrize.TabIndex = 7;
             // 
             // productStock
@@ -189,12 +190,22 @@
             this.addedDate.Name = "addedDate";
             this.addedDate.Size = new System.Drawing.Size(250, 27);
             this.addedDate.TabIndex = 17;
+            this.addedDate.ValueChanged += new System.EventHandler(this.addedDate_ValueChanged);
+            // 
+            // productMWST
+            // 
+            this.productMWST.Location = new System.Drawing.Point(81, 171);
+            this.productMWST.Name = "productMWST";
+            this.productMWST.PlaceholderText = "MWST";
+            this.productMWST.Size = new System.Drawing.Size(70, 27);
+            this.productMWST.TabIndex = 18;
             // 
             // viewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 274);
+            this.Controls.Add(this.productMWST);
             this.Controls.Add(this.addedDate);
             this.Controls.Add(this.labelDateAdded);
             this.Controls.Add(this.labelExpDate);
@@ -237,5 +248,6 @@
         private System.Windows.Forms.Label labelExpDate;
         private System.Windows.Forms.Label labelDateAdded;
         private System.Windows.Forms.DateTimePicker addedDate;
+        private System.Windows.Forms.TextBox productMWST;
     }
 }

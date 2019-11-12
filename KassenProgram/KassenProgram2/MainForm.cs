@@ -13,6 +13,7 @@ namespace KassenProgram {
         public MainForm() { InitializeComponent(); }
 
         public void UpdateListView() {
+            ProductDB.SortList_byID();
             listView2.Clear();
 
             listView2.Columns.Add("Id", 40);
@@ -23,6 +24,7 @@ namespace KassenProgram {
             listView2.Columns.Add("Stock", 60);
             listView2.Columns.Add("Prize");
             listView2.Columns.Add("Description", 300);
+            listView2.Columns.Add("MWST", 60);
             listView2.Columns.Add("Added", 200);
             listView2.Columns.Add("ExpiryDate", 200);
 
@@ -35,6 +37,7 @@ namespace KassenProgram {
                 item.SubItems.Add(ProductDB.ProductList[i].amountStock.ToString());
                 item.SubItems.Add(ProductDB.ProductList[i].prize.ToString() + "€");
                 item.SubItems.Add(ProductDB.ProductList[i].description);
+                item.SubItems.Add(ProductDB.ProductList[i].MWST.ToString() + "%");
                 item.SubItems.Add(ProductDB.ProductList[i].added.ToString());
                 item.SubItems.Add(ProductDB.ProductList[i].expiryDate.ToString());
                 listView2.Items.Add(item);
@@ -46,30 +49,7 @@ namespace KassenProgram {
             listView2.View = View.Details;
             listView2.FullRowSelect = true;
 
-            listView2.Columns.Add("Id", 40);
-            listView2.Columns.Add("Type");
-            listView2.Columns.Add("Name");
-            listView2.Columns.Add("Sold");
-            listView2.Columns.Add("Store", 60);
-            listView2.Columns.Add("Stock", 60);
-            listView2.Columns.Add("Prize");
-            listView2.Columns.Add("Description", 300);
-            listView2.Columns.Add("Added", 200);
-            listView2.Columns.Add("ExpiryDate", 200);
-
-            for (int i = 0; i < ProductDB.ProductList.Count; i++) {
-                ListViewItem item = new ListViewItem(ProductDB.ProductList[i].id.ToString(), i);
-                item.SubItems.Add(ProductDB.ProductList[i].type);
-                item.SubItems.Add(ProductDB.ProductList[i].name);
-                item.SubItems.Add(ProductDB.ProductList[i].sold.ToString());
-                item.SubItems.Add(ProductDB.ProductList[i].amountStore.ToString());
-                item.SubItems.Add(ProductDB.ProductList[i].amountStock.ToString());
-                item.SubItems.Add(ProductDB.ProductList[i].prize.ToString() + "€");
-                item.SubItems.Add(ProductDB.ProductList[i].description);
-                item.SubItems.Add(ProductDB.ProductList[i].added.ToString());
-                item.SubItems.Add(ProductDB.ProductList[i].expiryDate.ToString());
-                listView2.Items.Add(item);
-            }
+            UpdateListView();
             listView2.MultiSelect = false;
         }
 

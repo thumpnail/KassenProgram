@@ -17,7 +17,7 @@ namespace KassenProgram {
 
         private void buttonSave_Click(object sender, EventArgs e) {
             try {
-                Utils.ProductDB.AddProduct(int.Parse(productID.Text), productType.Text, productName.Text, 0, int.Parse(productAmountStore.Text), int.Parse(productAmountStock.Text), double.Parse(productPrize.Text), productDescription.Text, productExpiryDate.Value);
+                Utils.ProductDB.AddProduct(int.Parse(productID.Text), productType.Text, productName.Text, 0, int.Parse(productAmountStore.Text), int.Parse(productAmountStock.Text), double.Parse(productPrize.Text), productDescription.Text, double.Parse(productMWST.Text), productExpiryDate.Value);
             } catch (Exception) {
                 Console.WriteLine("error");
             }
@@ -30,6 +30,7 @@ namespace KassenProgram {
             productAmountStock.Enabled = false;
             productPrize.Enabled = false;
             productExpiryDate.Enabled = false;
+            productMWST.Enabled = false;
 
             Program.form.UpdateListView();
         }
@@ -48,10 +49,20 @@ namespace KassenProgram {
             productAmountStock.Enabled = true;
             productPrize.Enabled = true;
             productExpiryDate.Enabled = true;
+            productMWST.Enabled = true;
         }
 
         private void generateID_Click(object sender, EventArgs e) {
-            productID.Text = ""+(Utils.ProductDB.ProductList.Count+1);
+            int a = 1;
+            if (Utils.ProductDB.ProductList.Count != 0) {
+                for (int i = 0; i < Utils.ProductDB.ProductList.Count; i++) {
+                    while(Utils.ProductDB.ProductList[i].id >= a) {
+                        a++;
+                    }
+                }
+            }
+
+            productID.Text = a.ToString();
         }
 
         private void checkBoxEdvanced_CheckedChanged(object sender, EventArgs e) {
