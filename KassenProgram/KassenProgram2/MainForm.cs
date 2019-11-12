@@ -21,7 +21,8 @@ namespace KassenProgram {
             listView2.Columns.Add("Sold");
             listView2.Columns.Add("Store", 60);
             listView2.Columns.Add("Stock", 60);
-            listView2.Columns.Add("Prize");
+            listView2.Columns.Add("Prize", 60);
+            listView2.Columns.Add("Mwst", 60);
             listView2.Columns.Add("Description", 300);
             listView2.Columns.Add("Added", 200);
             listView2.Columns.Add("ExpiryDate", 200);
@@ -34,6 +35,7 @@ namespace KassenProgram {
                 item.SubItems.Add(ProductDB.ProductList[i].amountStore.ToString());
                 item.SubItems.Add(ProductDB.ProductList[i].amountStock.ToString());
                 item.SubItems.Add(ProductDB.ProductList[i].prize.ToString() + "€");
+                item.SubItems.Add(ProductDB.ProductList[i].MWST.ToString() + "%");
                 item.SubItems.Add(ProductDB.ProductList[i].description);
                 item.SubItems.Add(ProductDB.ProductList[i].added.ToString());
                 item.SubItems.Add(ProductDB.ProductList[i].expiryDate.ToString());
@@ -52,7 +54,8 @@ namespace KassenProgram {
             listView2.Columns.Add("Sold");
             listView2.Columns.Add("Store", 60);
             listView2.Columns.Add("Stock", 60);
-            listView2.Columns.Add("Prize");
+            listView2.Columns.Add("Prize", 60);
+            listView2.Columns.Add("Mwst", 60);
             listView2.Columns.Add("Description", 300);
             listView2.Columns.Add("Added", 200);
             listView2.Columns.Add("ExpiryDate", 200);
@@ -65,6 +68,7 @@ namespace KassenProgram {
                 item.SubItems.Add(ProductDB.ProductList[i].amountStore.ToString());
                 item.SubItems.Add(ProductDB.ProductList[i].amountStock.ToString());
                 item.SubItems.Add(ProductDB.ProductList[i].prize.ToString() + "€");
+                item.SubItems.Add(ProductDB.ProductList[i].MWST.ToString() + "%");
                 item.SubItems.Add(ProductDB.ProductList[i].description);
                 item.SubItems.Add(ProductDB.ProductList[i].added.ToString());
                 item.SubItems.Add(ProductDB.ProductList[i].expiryDate.ToString());
@@ -79,15 +83,17 @@ namespace KassenProgram {
         }
 
         private void buttonDeleteSelected_Click(object sender, EventArgs e) {
-            try {
-                ListView lv = new ListView();
-                for (int i = 0; i < listView2.SelectedItems[0].SubItems.Count; i++) {
-                    Console.WriteLine(listView2.SelectedItems[0].SubItems[i].Text);
+            DialogResult dialogResult = MessageBox.Show("Do you wanna delete this entry", "Wait", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes) {
+                try {
+                    for (int i = 0; i < listView2.SelectedItems[0].SubItems.Count; i++) {
+                        Console.WriteLine(listView2.SelectedItems[0].SubItems[i].Text);
+                    }
+                    Console.WriteLine("////////// " + int.Parse(listView2.SelectedItems[0].Text));
+                    Utils.ProductDB.RemoveProduct(int.Parse(listView2.SelectedItems[0].Text));
+                } catch (Exception) {
+                    Console.WriteLine("Nothing selected");
                 }
-                Console.WriteLine("////////// " + int.Parse(listView2.SelectedItems[0].Text));
-                Utils.ProductDB.RemoveProduct(int.Parse(listView2.SelectedItems[0].Text));
-            } catch (Exception) {
-                Console.WriteLine("Nothing selected");
             }
             UpdateListView();
         }
@@ -98,6 +104,9 @@ namespace KassenProgram {
         }
 
         private void Update_Click(object sender, EventArgs e) {
+            for (int i = 0; i < Utils.ProductDB.ProductList.Count; i++) {
+                ProductDB.ProductList[i].printAll();
+            }
             UpdateListView();
         }
     }

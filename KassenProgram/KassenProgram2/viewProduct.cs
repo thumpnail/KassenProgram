@@ -13,23 +13,60 @@ namespace KassenProgram {
         }
 
         private void checkBoxEnableEdit_CheckedChanged(object sender, EventArgs e) {
-
+            if (checkBoxEnableEdit.Checked) {
+                buttonCancel.Enabled = true;
+                buttonSave.Enabled = true;
+                buttonGenerateID.Enabled = true;
+                productID.Enabled = true;
+                productType.Enabled = true;
+                productName.Enabled = true;
+                productSold.Enabled = true;
+                productStore.Enabled = true;
+                productStock.Enabled = true;
+                productPrize.Enabled = true;
+                productMWST.Enabled = true;
+                productDescription.Enabled = true;
+                productExpiryDate.Enabled = true;
+                addedDate.Enabled = true;
+            } else {
+                buttonCancel.Enabled = false;
+                buttonSave.Enabled = false;
+                buttonGenerateID.Enabled = false;
+                productID.Enabled = false;
+                productType.Enabled = false;
+                productName.Enabled = false;
+                productSold.Enabled = false;
+                productStore.Enabled = false;
+                productStock.Enabled = false;
+                productPrize.Enabled = false;
+                productMWST.Enabled = false;
+                productDescription.Enabled = false;
+                productExpiryDate.Enabled = false;
+                addedDate.Enabled = false;
+            }
+            
         }
 
         private void checkBoxEdvanced_CheckedChanged(object sender, EventArgs e) {
-
+            if (checkBoxEnableAdvanced.Checked) {
+                productID.Enabled = true;
+                buttonGenerateID.Enabled = false;
+            } else {
+                productID.Enabled = false;
+                buttonGenerateID.Enabled = true;
+            }
         }
 
         private void buttonSave_Click(object sender, EventArgs e) {
-
+            
         }
 
         private void buttonCancel_Click(object sender, EventArgs e) {
-
+            this.Close();
         }
 
         private void generateID_Click(object sender, EventArgs e) {
-
+            productID.Text = Utils.ProductDB.ProductList.Count.ToString();
         }
 
         private void viewProduct_Load(object sender, EventArgs e) {
@@ -44,6 +81,7 @@ namespace KassenProgram {
             productStore.Enabled = false;
             productStock.Enabled = false;
             productPrize.Enabled = false;
+            productMWST.Enabled = false;
             productDescription.Enabled = false;
             productExpiryDate.Enabled = false;
             addedDate.Enabled = false;
@@ -61,7 +99,11 @@ namespace KassenProgram {
                 productExpiryDate.Value = DateTime.Parse(Program.form.listView2.SelectedItems[0].SubItems[8].Text);
                 addedDate.Value = DateTime.Parse(Program.form.listView2.SelectedItems[0].SubItems[9].Text);
             } catch (Exception) {
-                Console.WriteLine("Nothing Selected");
+                DialogResult dialogResult = MessageBox.Show("Error while parsing", "ERROR", MessageBoxButtons.OK);
+                Console.WriteLine(dialogResult);
+                if (dialogResult == DialogResult.OK) {
+                    this.Close();
+                }
             }
         }
     }

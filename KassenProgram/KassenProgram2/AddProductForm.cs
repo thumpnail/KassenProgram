@@ -17,9 +17,10 @@ namespace KassenProgram {
 
         private void buttonSave_Click(object sender, EventArgs e) {
             try {
-                Utils.ProductDB.AddProduct(int.Parse(productID.Text), productType.Text, productName.Text, 0, int.Parse(productAmountStore.Text), int.Parse(productAmountStock.Text), double.Parse(productPrize.Text), productDescription.Text, productExpiryDate.Value);
+                Utils.ProductDB.ProductList.Insert(int.Parse(productID.Text), new Utils.Product(int.Parse(productID.Text), productType.Text, productName.Text, 0, int.Parse(productAmountStore.Text), int.Parse(productAmountStock.Text), double.Parse(productPrize.Text), productDescription.Text, double.Parse(productMWST.Text), productExpiryDate.Value));
             } catch (Exception) {
                 Console.WriteLine("error");
+                DialogResult dialogResult = MessageBox.Show("Watch you product", "ERROR", MessageBoxButtons.OK);
             }
             buttonSave.Enabled = false;
             buttonCancel.Enabled = false;
@@ -30,6 +31,7 @@ namespace KassenProgram {
             productAmountStock.Enabled = false;
             productPrize.Enabled = false;
             productExpiryDate.Enabled = false;
+            productMWST.Enabled = false;
 
             Program.form.UpdateListView();
         }
@@ -48,6 +50,7 @@ namespace KassenProgram {
             productAmountStock.Enabled = true;
             productPrize.Enabled = true;
             productExpiryDate.Enabled = true;
+            productMWST.Enabled = true;
         }
 
         private void generateID_Click(object sender, EventArgs e) {

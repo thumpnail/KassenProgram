@@ -40,13 +40,14 @@
             this.labelExpDate = new System.Windows.Forms.Label();
             this.labelDateAdded = new System.Windows.Forms.Label();
             this.addedDate = new System.Windows.Forms.DateTimePicker();
+            this.productMWST = new System.Windows.Forms.TextBox();
             // 
             // checkBoxEnableAdvanced
             // 
             this.checkBoxEnableAdvanced.AutoSize = true;
             this.checkBoxEnableAdvanced.Location = new System.Drawing.Point(5, 237);
             this.checkBoxEnableAdvanced.Name = "checkBoxEnableAdvanced";
-            this.checkBoxEnableAdvanced.Size = new System.Drawing.Size(146, 24);
+            this.checkBoxEnableAdvanced.Size = new System.Drawing.Size(117, 19);
             this.checkBoxEnableAdvanced.TabIndex = 12;
             this.checkBoxEnableAdvanced.Text = "Enable Advanced";
             this.checkBoxEnableAdvanced.UseVisualStyleBackColor = true;
@@ -76,7 +77,7 @@
             // 
             this.productExpiryDate.Location = new System.Drawing.Point(288, 6);
             this.productExpiryDate.Name = "productExpiryDate";
-            this.productExpiryDate.Size = new System.Drawing.Size(250, 27);
+            this.productExpiryDate.Size = new System.Drawing.Size(250, 23);
             this.productExpiryDate.TabIndex = 9;
             // 
             // productDescription
@@ -93,7 +94,7 @@
             this.productPrize.Location = new System.Drawing.Point(5, 171);
             this.productPrize.Name = "productPrize";
             this.productPrize.PlaceholderText = "Prize";
-            this.productPrize.Size = new System.Drawing.Size(148, 27);
+            this.productPrize.Size = new System.Drawing.Size(148, 23);
             this.productPrize.TabIndex = 7;
             // 
             // productStock
@@ -101,7 +102,7 @@
             this.productStock.Location = new System.Drawing.Point(5, 138);
             this.productStock.Name = "productStock";
             this.productStock.PlaceholderText = "Amount Stock";
-            this.productStock.Size = new System.Drawing.Size(148, 27);
+            this.productStock.Size = new System.Drawing.Size(148, 23);
             this.productStock.TabIndex = 6;
             // 
             // productStore
@@ -109,7 +110,7 @@
             this.productStore.Location = new System.Drawing.Point(5, 105);
             this.productStore.Name = "productStore";
             this.productStore.PlaceholderText = "Amount Store";
-            this.productStore.Size = new System.Drawing.Size(148, 27);
+            this.productStore.Size = new System.Drawing.Size(148, 23);
             this.productStore.TabIndex = 5;
             // 
             // productName
@@ -117,7 +118,7 @@
             this.productName.Location = new System.Drawing.Point(5, 72);
             this.productName.Name = "productName";
             this.productName.PlaceholderText = "Name";
-            this.productName.Size = new System.Drawing.Size(148, 27);
+            this.productName.Size = new System.Drawing.Size(148, 23);
             this.productName.TabIndex = 4;
             // 
             // productType
@@ -125,7 +126,7 @@
             this.productType.Location = new System.Drawing.Point(5, 39);
             this.productType.Name = "productType";
             this.productType.PlaceholderText = "Type";
-            this.productType.Size = new System.Drawing.Size(148, 27);
+            this.productType.Size = new System.Drawing.Size(148, 23);
             this.productType.TabIndex = 3;
             // 
             // productID
@@ -133,7 +134,7 @@
             this.productID.Location = new System.Drawing.Point(105, 6);
             this.productID.Name = "productID";
             this.productID.PlaceholderText = "ID";
-            this.productID.Size = new System.Drawing.Size(48, 27);
+            this.productID.Size = new System.Drawing.Size(48, 23);
             this.productID.TabIndex = 2;
             // 
             // buttonGenerateID
@@ -151,7 +152,7 @@
             this.checkBoxEnableEdit.AutoSize = true;
             this.checkBoxEnableEdit.Location = new System.Drawing.Point(157, 237);
             this.checkBoxEnableEdit.Name = "checkBoxEnableEdit";
-            this.checkBoxEnableEdit.Size = new System.Drawing.Size(106, 24);
+            this.checkBoxEnableEdit.Size = new System.Drawing.Size(84, 19);
             this.checkBoxEnableEdit.TabIndex = 13;
             this.checkBoxEnableEdit.Text = "Enable Edit";
             this.checkBoxEnableEdit.UseVisualStyleBackColor = true;
@@ -162,7 +163,7 @@
             this.productSold.Location = new System.Drawing.Point(5, 204);
             this.productSold.Name = "productSold";
             this.productSold.PlaceholderText = "Sold";
-            this.productSold.Size = new System.Drawing.Size(148, 27);
+            this.productSold.Size = new System.Drawing.Size(70, 23);
             this.productSold.TabIndex = 14;
             // 
             // labelExpDate
@@ -170,7 +171,7 @@
             this.labelExpDate.AutoSize = true;
             this.labelExpDate.Location = new System.Drawing.Point(159, 8);
             this.labelExpDate.Name = "labelExpDate";
-            this.labelExpDate.Size = new System.Drawing.Size(85, 20);
+            this.labelExpDate.Size = new System.Drawing.Size(66, 15);
             this.labelExpDate.TabIndex = 15;
             this.labelExpDate.Text = "Expiry Date";
             // 
@@ -179,7 +180,7 @@
             this.labelDateAdded.AutoSize = true;
             this.labelDateAdded.Location = new System.Drawing.Point(159, 42);
             this.labelDateAdded.Name = "labelDateAdded";
-            this.labelDateAdded.Size = new System.Drawing.Size(90, 20);
+            this.labelDateAdded.Size = new System.Drawing.Size(69, 15);
             this.labelDateAdded.TabIndex = 16;
             this.labelDateAdded.Text = "Added Date";
             // 
@@ -187,14 +188,23 @@
             // 
             this.addedDate.Location = new System.Drawing.Point(288, 39);
             this.addedDate.Name = "addedDate";
-            this.addedDate.Size = new System.Drawing.Size(250, 27);
+            this.addedDate.Size = new System.Drawing.Size(250, 23);
             this.addedDate.TabIndex = 17;
+            // 
+            // productMWST
+            // 
+            this.productMWST.Location = new System.Drawing.Point(83, 204);
+            this.productMWST.Name = "productMWST";
+            this.productMWST.PlaceholderText = "Mwst";
+            this.productMWST.Size = new System.Drawing.Size(70, 23);
+            this.productMWST.TabIndex = 18;
             // 
             // viewProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 274);
+            this.Controls.Add(this.productMWST);
             this.Controls.Add(this.addedDate);
             this.Controls.Add(this.labelDateAdded);
             this.Controls.Add(this.labelExpDate);
@@ -212,6 +222,7 @@
             this.Controls.Add(this.productType);
             this.Controls.Add(this.productID);
             this.Controls.Add(this.buttonGenerateID);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "viewProduct";
             this.Text = "viewProduct";
             this.Load += new System.EventHandler(this.viewProduct_Load);
@@ -237,5 +248,6 @@
         private System.Windows.Forms.Label labelExpDate;
         private System.Windows.Forms.Label labelDateAdded;
         private System.Windows.Forms.DateTimePicker addedDate;
+        private System.Windows.Forms.TextBox productMWST;
     }
 }

@@ -1,2 +1,3 @@
-{"id":1,"type":"choclate","name":"Schokolade","sold":5,"amountStore":6,"amountStock":7,"prize":10.05,"description":"alle lieben fleisch","added":"2019-11-06T15:48:35.875954+01:00","expiryDate":"2019-11-06T00:00:00+01:00"}
-{"id":3,"type":"tea","name":"Schwarz Tee","sold":5,"amountStore":6,"amountStock":7,"prize":11.2,"description":"Schwarzer tee ist besser als Kaffe","added":"2019-11-06T15:48:35.8761643+01:00","expiryDate":"2019-11-06T14:48:35.8761639Z"}
+{"id":1,"type":"choclate","name":"Schokolade","sold":5,"amountStore":6,"amountStock":7,"prize":10.05,"description":"alle lieben fleisch","MWST":19.0,"added":"2019-11-09T12:45:50.8441347+01:00","expiryDate":"2019-11-09T12:45:50.8280146+01:00"}
+{"id":3,"type":"tea","name":"Schwarz Tee","sold":5,"amountStore":6,"amountStock":7,"prize":11.2,"description":"Schwarzer tee ist besser als Kaffe","MWST":14.0,"added":"2019-11-09T12:45:50.8442602+01:00","expiryDate":"2019-11-09T12:45:50.8442598+01:00"}
+{"id":2,"type":"tea","name":"Roibosh","sold":0,"amountStore":4,"amountStock":1,"prize":2.5,"description":"boii some tea","MWST":14.0,"added":"2019-11-09T13:33:36.734226+01:00","expiryDate":"2019-11-30T13:32:33"}
