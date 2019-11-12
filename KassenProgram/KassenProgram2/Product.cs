@@ -12,24 +12,60 @@ namespace KassenProgram.Utils {
             for (int i = 0; i < ProductList.Count; i++) {
                 if (ProductList[i].id == id) {
 
+<<<<<<< HEAD
                 }
             }
         }
         public static void AddProduct(int id, string type, string name, int sold, int amountStore, int amountStock, double prize, string description, double MWST, DateTime expiryDate) {
             ProductDB.ProductList.Add(new Product(id, type, name, sold, amountStore, amountStock, prize, description, MWST, expiryDate));
+=======
+        public static void AddProduct(int id, string type, string name, int sold, int amountStore, int amountStock, double prize, string description, double MWST, DateTime expiryDate) {
+            ProductDB.ProductList.Add(new Product(id, type, name, sold, amountStore, amountStock, prize, description, MWST, expiryDate));
+            Console.WriteLine("//////////////Print product");
+            Console.WriteLine("ID:___________" + id);
+            Console.WriteLine("Name:_________" + name);
+            Console.WriteLine("Type:_________" + type);
+            Console.WriteLine("Sold:_________" + sold);
+            Console.WriteLine("Amount Store:_" + amountStore);
+            Console.WriteLine("Amount Stock:_" + amountStock);
+            Console.WriteLine("Prize:________" + prize);
+            Console.WriteLine("Description:__" + description);
+            Console.WriteLine("MWST__________" + MWST);
+            Console.WriteLine("Expiry Date:__" + expiryDate);
+            Console.WriteLine();
+
+            Console.WriteLine("//////////////Print list");
+            for (int i = 0; i < ProductList.Count; i++) {
+                ProductList[i].printAll();
+            }
+>>>>>>> origin/master
         }
         public static void RemoveProduct(int id) {
             Console.WriteLine("Removing:");
             ProductDB.ProductList[id].printAll();
             ProductList.Remove(ProductList[id-1]);
-            ProductList.Sort();
+        }
+        public static void SortList_byID() {
+            List<Product> newProductList = new List<Product>();
+            for (int i = 0; i < ProductList.Count; i++) {
+                try {
+                    for (int o = 0; o < ProductList.Count; o++) {
+                        if (ProductList[o].id == i + 1) {
+                            newProductList.Add(ProductList[o]);
+                        }
+                    }
+                } catch (Exception) {
+                    Console.WriteLine("Error");
+                }
+            }
+            ProductList = newProductList;
         }
     }
 
     public class Product {
-        public int id { get; }
-        public string type { get; }
-        public string name { get; }
+        public int id { get; set; }
+        public string type { get; set; }
+        public string name { get; set; }
         public int sold { get; set; }
         public int amountStore { get; set; }
         public int amountStock { get; set; }
@@ -38,7 +74,11 @@ namespace KassenProgram.Utils {
         public double MWST { get; set; }
         public DateTime added { get; set; }
         public DateTime expiryDate { get; set; }
+<<<<<<< HEAD
         public Product(int id, string type, string name, int sold, int amountStore, int amountStock, double prize, string description, double MWST, DateTime expiryDate) {
+=======
+        public Product(int id, string type, string name, int sold, int amountStore, int amountStock, double prize, string description, double MWST,DateTime expiryDate) {
+>>>>>>> origin/master
             this.id = id;
             this.type = type;
             this.name = name;

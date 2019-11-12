@@ -13,6 +13,7 @@ namespace KassenProgram {
         public MainForm() { InitializeComponent(); }
 
         public void UpdateListView() {
+            ProductDB.SortList_byID();
             listView2.Clear();
 
             listView2.Columns.Add("Id", 40);
@@ -24,6 +25,7 @@ namespace KassenProgram {
             listView2.Columns.Add("Prize", 60);
             listView2.Columns.Add("Mwst", 60);
             listView2.Columns.Add("Description", 300);
+            listView2.Columns.Add("MWST", 60);
             listView2.Columns.Add("Added", 200);
             listView2.Columns.Add("ExpiryDate", 200);
 
@@ -37,6 +39,7 @@ namespace KassenProgram {
                 item.SubItems.Add(ProductDB.ProductList[i].prize.ToString() + "€");
                 item.SubItems.Add(ProductDB.ProductList[i].MWST.ToString() + "%");
                 item.SubItems.Add(ProductDB.ProductList[i].description);
+                item.SubItems.Add(ProductDB.ProductList[i].MWST.ToString() + "%");
                 item.SubItems.Add(ProductDB.ProductList[i].added.ToString());
                 item.SubItems.Add(ProductDB.ProductList[i].expiryDate.ToString());
                 listView2.Items.Add(item);
@@ -48,6 +51,7 @@ namespace KassenProgram {
             listView2.View = View.Details;
             listView2.FullRowSelect = true;
 
+<<<<<<< HEAD
             listView2.Columns.Add("Id", 40);
             listView2.Columns.Add("Type");
             listView2.Columns.Add("Name");
@@ -74,6 +78,9 @@ namespace KassenProgram {
                 item.SubItems.Add(ProductDB.ProductList[i].expiryDate.ToString());
                 listView2.Items.Add(item);
             }
+=======
+            UpdateListView();
+>>>>>>> origin/master
             listView2.MultiSelect = false;
         }
 

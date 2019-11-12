@@ -92,7 +92,11 @@
             this.productPrize.Location = new System.Drawing.Point(4, 171);
             this.productPrize.Name = "productPrize";
             this.productPrize.PlaceholderText = "Prize";
+<<<<<<< HEAD
             this.productPrize.Size = new System.Drawing.Size(70, 23);
+=======
+            this.productPrize.Size = new System.Drawing.Size(70, 27);
+>>>>>>> origin/master
             this.productPrize.TabIndex = 7;
             // 
             // productDescription
@@ -146,8 +150,13 @@
             // 
             this.productMWST.Location = new System.Drawing.Point(82, 171);
             this.productMWST.Name = "productMWST";
+<<<<<<< HEAD
             this.productMWST.PlaceholderText = "Mwst";
             this.productMWST.Size = new System.Drawing.Size(70, 23);
+=======
+            this.productMWST.PlaceholderText = "MWST";
+            this.productMWST.Size = new System.Drawing.Size(70, 27);
+>>>>>>> origin/master
             this.productMWST.TabIndex = 13;
             // 
             // AddProductForm

@@ -17,7 +17,11 @@ namespace KassenProgram {
 
         private void buttonSave_Click(object sender, EventArgs e) {
             try {
+<<<<<<< HEAD
                 Utils.ProductDB.ProductList.Insert(int.Parse(productID.Text), new Utils.Product(int.Parse(productID.Text), productType.Text, productName.Text, 0, int.Parse(productAmountStore.Text), int.Parse(productAmountStock.Text), double.Parse(productPrize.Text), productDescription.Text, double.Parse(productMWST.Text), productExpiryDate.Value));
+=======
+                Utils.ProductDB.AddProduct(int.Parse(productID.Text), productType.Text, productName.Text, 0, int.Parse(productAmountStore.Text), int.Parse(productAmountStock.Text), double.Parse(productPrize.Text), productDescription.Text, double.Parse(productMWST.Text), productExpiryDate.Value);
+>>>>>>> origin/master
             } catch (Exception) {
                 Console.WriteLine("error");
                 DialogResult dialogResult = MessageBox.Show("Watch you product", "ERROR", MessageBoxButtons.OK);
@@ -54,7 +58,16 @@ namespace KassenProgram {
         }
 
         private void generateID_Click(object sender, EventArgs e) {
-            productID.Text = ""+(Utils.ProductDB.ProductList.Count+1);
+            int a = 1;
+            if (Utils.ProductDB.ProductList.Count != 0) {
+                for (int i = 0; i < Utils.ProductDB.ProductList.Count; i++) {
+                    while(Utils.ProductDB.ProductList[i].id >= a) {
+                        a++;
+                    }
+                }
+            }
+
+            productID.Text = a.ToString();
         }
 
         private void checkBoxEdvanced_CheckedChanged(object sender, EventArgs e) {

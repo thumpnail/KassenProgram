@@ -94,7 +94,11 @@
             this.productPrize.Location = new System.Drawing.Point(5, 171);
             this.productPrize.Name = "productPrize";
             this.productPrize.PlaceholderText = "Prize";
+<<<<<<< HEAD
             this.productPrize.Size = new System.Drawing.Size(148, 23);
+=======
+            this.productPrize.Size = new System.Drawing.Size(70, 27);
+>>>>>>> origin/master
             this.productPrize.TabIndex = 7;
             // 
             // productStock
@@ -190,6 +194,15 @@
             this.addedDate.Name = "addedDate";
             this.addedDate.Size = new System.Drawing.Size(250, 23);
             this.addedDate.TabIndex = 17;
+            this.addedDate.ValueChanged += new System.EventHandler(this.addedDate_ValueChanged);
+            // 
+            // productMWST
+            // 
+            this.productMWST.Location = new System.Drawing.Point(81, 171);
+            this.productMWST.Name = "productMWST";
+            this.productMWST.PlaceholderText = "MWST";
+            this.productMWST.Size = new System.Drawing.Size(70, 27);
+            this.productMWST.TabIndex = 18;
             // 
             // productMWST
             // 
