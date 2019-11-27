@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-{"id":1,"type":"choclate","name":"Schokolade","sold":5,"amountStore":6,"amountStock":7,"prize":10.05,"description":"alle lieben fleisch","MWST":19.0,"added":"2019-11-09T12:45:50.8441347+01:00","expiryDate":"2019-11-09T12:45:50.8280146+01:00"}
-{"id":3,"type":"tea","name":"Schwarz Tee","sold":5,"amountStore":6,"amountStock":7,"prize":11.2,"description":"Schwarzer tee ist besser als Kaffe","MWST":14.0,"added":"2019-11-09T12:45:50.8442602+01:00","expiryDate":"2019-11-09T12:45:50.8442598+01:00"}
-{"id":2,"type":"tea","name":"Roibosh","sold":0,"amountStore":4,"amountStock":1,"prize":2.5,"description":"boii some tea","MWST":14.0,"added":"2019-11-09T13:33:36.734226+01:00","expiryDate":"2019-11-30T13:32:33"}
-=======
->>>>>>> origin/master
+{"id":"4030254414465","type":"tea","name":"Rooibos","sold":0,"amountStore":6,"amountStock":0,"prize":2.9,"description":"Beerentraum;Afrika;","MWST":19.0,"added":"2019-11-27T13:05:32.6432909+01:00","expiryDate":"2020-07-01T00:00:00"}
+{"id":"4013320012338","type":"tea","name":"Kraeuter Tee","sold":0,"amountStore":4,"amountStock":0,"prize":3.0,"description":"Kraeuter Tee;Bio;","MWST":19.0,"added":"2019-11-27T14:23:19.7134063+01:00","expiryDate":"2019-11-27T00:00:00"}
+{"id":"4030254413826","type":"tea","name":"Rooibos","sold":0,"amountStore":8,"amountStock":0,"prize":2.9,"description":"Vanille;Suedafrika;","MWST":19.0,"added":"2019-11-27T14:59:58.0849061+01:00","expiryDate":"2019-11-27T00:00:00"}
+{"id":"0","type":"tea","name":"Kraeuter Tee","sold":0,"amountStore":4,"amountStock":0,"prize":3.0,"description":"Kraeuter Tee;Bio;","MWST":14.0,"added":"2019-11-27T16:13:26.255614+01:00","expiryDate":"2022-09-17T00:00:00"}

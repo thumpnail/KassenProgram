@@ -8,21 +8,17 @@ using System.Windows.Forms;
 
 namespace KassenProgram {
     public partial class viewProduct : Form {
+        private static string oldId;
+
         public viewProduct() {
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-=======
-        private int oldID;
-
->>>>>>> origin/master
         private void checkBoxEnableEdit_CheckedChanged(object sender, EventArgs e) {
             if (checkBoxEnableEdit.Checked) {
                 buttonCancel.Enabled = true;
                 buttonSave.Enabled = true;
-                buttonGenerateID.Enabled = true;
-<<<<<<< HEAD
+
                 productID.Enabled = true;
                 productType.Enabled = true;
                 productName.Enabled = true;
@@ -37,7 +33,6 @@ namespace KassenProgram {
             } else {
                 buttonCancel.Enabled = false;
                 buttonSave.Enabled = false;
-                buttonGenerateID.Enabled = false;
                 productID.Enabled = false;
                 productType.Enabled = false;
                 productName.Enabled = false;
@@ -51,58 +46,14 @@ namespace KassenProgram {
                 addedDate.Enabled = false;
             }
             
-=======
-                buttonGenerateID.Enabled = true;
-                productID.Enabled = true;
-                productDescription.Enabled = true;
-                productExpiryDate.Enabled = true;
-                productMWST.Enabled = true;
-                productName.Enabled = true;
-                productPrize.Enabled = true;
-                productSold.Enabled = true;
-                productStock.Enabled = true;
-                productStore.Enabled = true;
-                productType.Enabled = true;
-                addedDate.Enabled = true;
-                
-            } else {
-                buttonCancel.Enabled = true;
-                buttonSave.Enabled = true;
-                buttonGenerateID.Enabled = true;
-                buttonGenerateID.Enabled = false;
-                productID.Enabled = false;
-                productDescription.Enabled = false;
-                productExpiryDate.Enabled = false;
-                productMWST.Enabled = false;
-                productName.Enabled = false;
-                productPrize.Enabled = false;
-                productSold.Enabled = false;
-                productStock.Enabled = false;
-                productStore.Enabled = false;
-                productType.Enabled = false;
-                addedDate.Enabled = false;
-            }
->>>>>>> origin/master
-        }
 
-        private void checkBoxEdvanced_CheckedChanged(object sender, EventArgs e) {
-            if (checkBoxEnableAdvanced.Checked) {
-                productID.Enabled = true;
-                buttonGenerateID.Enabled = false;
-            } else {
-                productID.Enabled = false;
-                buttonGenerateID.Enabled = true;
-            }
         }
 
         private void buttonSave_Click(object sender, EventArgs e) {
-<<<<<<< HEAD
-            
-=======
-            Utils.ProductDB.RemoveProduct(oldID);
+            Utils.ProductDB.RemoveProduct(oldId);
 
             try {
-                Utils.ProductDB.AddProduct(int.Parse(productID.Text), productType.Text, productName.Text, int.Parse(productSold.Text), int.Parse(productStore.Text), int.Parse(productStock.Text), double.Parse(productPrize.Text), productDescription.Text, double.Parse(productMWST.Text), DateTime.Parse(productExpiryDate.Text));
+                Utils.ProductDB.AddProduct(productID.Text, productType.Text, productName.Text, int.Parse(productSold.Text), int.Parse(productStore.Text), int.Parse(productStock.Text), double.Parse(productPrize.Text), productDescription.Text, double.Parse(productMWST.Text), DateTime.Parse(productExpiryDate.Text));
             } catch (Exception a) {
                 Console.WriteLine("error while adding");
                 Console.WriteLine(a);
@@ -111,7 +62,6 @@ namespace KassenProgram {
             buttonCancel.Enabled = false;
             buttonSave.Enabled = false;
 
-            buttonGenerateID.Enabled = false;
             productID.Enabled = false;
             productDescription.Enabled = false;
             productExpiryDate.Enabled = false;
@@ -127,21 +77,15 @@ namespace KassenProgram {
             checkBoxEnableEdit.Checked = false;
 
             Program.form.UpdateListView();
->>>>>>> origin/master
         }
 
         private void buttonCancel_Click(object sender, EventArgs e) {
             this.Close();
         }
 
-        private void generateID_Click(object sender, EventArgs e) {
-            productID.Text = Utils.ProductDB.ProductList.Count.ToString();
-        }
-
-        private void viewProduct_Load(object sender, EventArgs e) {
+        private void viewProduct_Load(object sender, EventArgs e) { 
             buttonCancel.Enabled = false;
             buttonSave.Enabled = false;
-            buttonGenerateID.Enabled = false;
             
             productID.Enabled = false;
             productType.Enabled = false;
@@ -156,32 +100,76 @@ namespace KassenProgram {
             productExpiryDate.Enabled = false;
             addedDate.Enabled = false;
 
-
-            try {
+            try {//id
                 productID.Text = Program.form.listView2.SelectedItems[0].SubItems[0].Text;
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//type
                 productType.Text = Program.form.listView2.SelectedItems[0].SubItems[1].Text;
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//name
                 productName.Text = Program.form.listView2.SelectedItems[0].SubItems[2].Text;
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//sold
                 productSold.Text = Program.form.listView2.SelectedItems[0].SubItems[3].Text;
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//amount store
                 productStore.Text = Program.form.listView2.SelectedItems[0].SubItems[4].Text;
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//amount stock
                 productStock.Text = Program.form.listView2.SelectedItems[0].SubItems[5].Text;
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//prize
                 productPrize.Text = Program.form.listView2.SelectedItems[0].SubItems[6].Text.Substring(0, Program.form.listView2.SelectedItems[0].SubItems[6].Text.IndexOf("€"));
-                productDescription.Text = Program.form.listView2.SelectedItems[0].SubItems[7].Text;
-                productMWST.Text = Program.form.listView2.SelectedItems[0].SubItems[8].Text.Substring(0, Program.form.listView2.SelectedItems[0].SubItems[8].Text.IndexOf("%"));
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//description
+                productDescription.Text = Program.form.listView2.SelectedItems[0].SubItems[8].Text;
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//mwst
+                productMWST.Text = Program.form.listView2.SelectedItems[0].SubItems[7].Text.Substring(0, Program.form.listView2.SelectedItems[0].SubItems[7].Text.IndexOf("%"));
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//expiry date
                 productExpiryDate.Value = DateTime.Parse(Program.form.listView2.SelectedItems[0].SubItems[9].Text);
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//added date
                 addedDate.Value = DateTime.Parse(Program.form.listView2.SelectedItems[0].SubItems[10].Text);
-            } catch (Exception) {
-<<<<<<< HEAD
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {//old id
+                oldId = productID.Text;
+            } catch (Exception error) {
+                Console.WriteLine(error);
+            }
+            try {
+                
+            } catch (Exception error) {
                 DialogResult dialogResult = MessageBox.Show("Error while parsing", "ERROR", MessageBoxButtons.OK);
                 Console.WriteLine(dialogResult);
+                Console.WriteLine(error);
                 if (dialogResult == DialogResult.OK) {
                     this.Close();
                 }
-=======
-                Console.WriteLine("Nothing Selected");
-                this.Close();
->>>>>>> origin/master
             }
-            oldID = int.Parse(productID.Text);
         }
 
         private void addedDate_ValueChanged(object sender, EventArgs e) {

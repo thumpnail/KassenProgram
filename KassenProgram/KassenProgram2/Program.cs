@@ -10,25 +10,16 @@ namespace KassenProgram {
         public static MainForm form = new MainForm();
         public static void Main(string[] args) {
             Console.Clear();
-<<<<<<< HEAD
-            string JSNDBFile = Directory.GetCurrentDirectory()+@"\products.json";
+
+            string JSNDBFile = Directory.GetCurrentDirectory() + @"\products.json";
             Console.WriteLine(JSNDBFile);
-=======
-            string JSNDBFile = @"products.json";
->>>>>>> origin/master
 
             Console.ForegroundColor = ConsoleColor.Blue;
             jsonReaderWriter.ReadJSON(JSNDBFile);
 
-<<<<<<< HEAD
-            //ProductDB.AddProduct(1,"choclate","Schokolade",5,6,7,10.05,"alle lieben fleisch", 19, DateTime.Now);
-            //ProductDB.AddProduct(2,"coffe","Kaffe",2,3,4,12.99,"Kaffe ist immer gut", 14, DateTime.Now);
-            //ProductDB.AddProduct(3,"tea","Schwarz Tee",5,6,7,11.20,"Schwarzer tee ist besser als Kaffe", 14, DateTime.Now);
-=======
-            ProductDB.AddProduct(1,"choclate","Schokolade",5,6,7,10.05,"alle lieben fleisch", 19, DateTime.Now);
-            //ProductDB.AddProduct(2,"coffe","Kaffe",2,3,4,12.99,"Kaffe ist immer gut", 14, DateTime.Now);
-            //ProductDB.AddProduct(3,"tea","Schwarz Tee",5,6,7,11.20,"Schwarzer tee ist besser als Kaffe", 14, DateTime.UtcNow);
->>>>>>> origin/master
+            ProductDB.AddProduct("4030254414465","tea","Rooibos",0,6,0,2.90,"Beerentraum;Afrika;", 19, DateTime.Parse("07.2020"));
+            ProductDB.AddProduct("4030254413826","tea","Rooibos",0,8,0,2.90,"Vanille;Suedafrika;", 19, DateTime.Parse("07.2020"));
+            ProductDB.AddProduct("0","tea","Kraeuter Tee",0,4,0,3.00,"Kraeuter Tee;Bio;", 14, DateTime.Parse("17.09.2022"));
 
             StartGUI();
 

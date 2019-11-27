@@ -17,11 +17,7 @@ namespace KassenProgram {
 
         private void buttonSave_Click(object sender, EventArgs e) {
             try {
-<<<<<<< HEAD
-                Utils.ProductDB.ProductList.Insert(int.Parse(productID.Text), new Utils.Product(int.Parse(productID.Text), productType.Text, productName.Text, 0, int.Parse(productAmountStore.Text), int.Parse(productAmountStock.Text), double.Parse(productPrize.Text), productDescription.Text, double.Parse(productMWST.Text), productExpiryDate.Value));
-=======
-                Utils.ProductDB.AddProduct(int.Parse(productID.Text), productType.Text, productName.Text, 0, int.Parse(productAmountStore.Text), int.Parse(productAmountStock.Text), double.Parse(productPrize.Text), productDescription.Text, double.Parse(productMWST.Text), productExpiryDate.Value);
->>>>>>> origin/master
+                Utils.ProductDB.AddProduct(productID.Text, productType.Text, productName.Text, 0, int.Parse(productAmountStore.Text), int.Parse(productAmountStock.Text), double.Parse(productPrize.Text), productDescription.Text, double.Parse(productMWST.Text), productExpiryDate.Value);
             } catch (Exception) {
                 Console.WriteLine("error");
                 DialogResult dialogResult = MessageBox.Show("Watch you product", "ERROR", MessageBoxButtons.OK);
@@ -47,7 +43,7 @@ namespace KassenProgram {
         private void AddProductForm_Load(object sender, EventArgs e) {
             buttonSave.Enabled = true;
             buttonCancel.Enabled = true;
-            productID.Enabled = false;
+            productID.Enabled = true;
             productType.Enabled = true;
             productName.Enabled = true;
             productAmountStore.Enabled = true;
@@ -57,27 +53,8 @@ namespace KassenProgram {
             productMWST.Enabled = true;
         }
 
-        private void generateID_Click(object sender, EventArgs e) {
-            int a = 1;
-            if (Utils.ProductDB.ProductList.Count != 0) {
-                for (int i = 0; i < Utils.ProductDB.ProductList.Count; i++) {
-                    while(Utils.ProductDB.ProductList[i].id >= a) {
-                        a++;
-                    }
-                }
-            }
+        private void productID_TextChanged(object sender, EventArgs e) {
 
-            productID.Text = a.ToString();
-        }
-
-        private void checkBoxEdvanced_CheckedChanged(object sender, EventArgs e) {
-            if (checkBoxEdvanced.Checked) {
-                productID.Enabled = true;
-                generateID.Enabled = false;
-            } else {
-                productID.Enabled = false;
-                generateID.Enabled = true;
-            }
         }
     }
 }
