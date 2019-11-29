@@ -34,6 +34,8 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.productMWST = new System.Windows.Forms.TextBox();
+            this.comboBoxTags = new System.Windows.Forms.ComboBox();
+            this.buttonAddTag = new System.Windows.Forms.Button();
             // 
             // productID
             // 
@@ -90,7 +92,7 @@
             this.productDescription.Multiline = true;
             this.productDescription.Name = "productDescription";
             this.productDescription.PlaceholderText = "Description";
-            this.productDescription.Size = new System.Drawing.Size(249, 159);
+            this.productDescription.Size = new System.Drawing.Size(249, 126);
             this.productDescription.TabIndex = 8;
             // 
             // productExpiryDate
@@ -128,6 +130,24 @@
             this.productMWST.Size = new System.Drawing.Size(70, 27);
             this.productMWST.TabIndex = 13;
             // 
+            // comboBoxTags
+            // 
+            this.comboBoxTags.FormattingEnabled = true;
+            this.comboBoxTags.Location = new System.Drawing.Point(158, 170);
+            this.comboBoxTags.Name = "comboBoxTags";
+            this.comboBoxTags.Size = new System.Drawing.Size(149, 28);
+            this.comboBoxTags.TabIndex = 14;
+            // 
+            // buttonAddTag
+            // 
+            this.buttonAddTag.Location = new System.Drawing.Point(313, 170);
+            this.buttonAddTag.Name = "buttonAddTag";
+            this.buttonAddTag.Size = new System.Drawing.Size(94, 30);
+            this.buttonAddTag.TabIndex = 15;
+            this.buttonAddTag.Text = "Add Tag";
+            this.buttonAddTag.UseVisualStyleBackColor = true;
+            this.buttonAddTag.Click += new System.EventHandler(this.buttonAddTag_Click);
+            // 
             // AddProductForm
             // 
             this.AcceptButton = this.buttonSave;
@@ -135,6 +155,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(415, 236);
+            this.Controls.Add(this.buttonAddTag);
+            this.Controls.Add(this.comboBoxTags);
             this.Controls.Add(this.productMWST);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
@@ -167,5 +189,7 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.TextBox productMWST;
+        public System.Windows.Forms.ComboBox comboBoxTags;
+        private System.Windows.Forms.Button buttonAddTag;
     }
 }

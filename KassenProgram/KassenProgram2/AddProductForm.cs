@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using KassenProgram.Utils;
 
 namespace KassenProgram {
     public partial class AddProductForm : Form {
@@ -51,10 +52,27 @@ namespace KassenProgram {
             productPrize.Enabled = true;
             productExpiryDate.Enabled = true;
             productMWST.Enabled = true;
+
+            for (int i = 0; i < TagFileReader.tagList.Count; i++) {
+                comboBoxTags.Items.Add(TagFileReader.tagList[i]);
+            }
         }
 
         private void productID_TextChanged(object sender, EventArgs e) {
 
+        }
+
+        private void buttonAddTag_Click(object sender, EventArgs e) {
+            try {
+                if (!productDescription.Text.Contains(comboBoxTags.SelectedItem.ToString())) {
+                    productDescription.Text += comboBoxTags.SelectedItem.ToString();
+                } else {
+                    Console.WriteLine("Error while adding Tag(" + comboBoxTags.SelectedItem.ToString() + ")");
+                }
+            } catch (Exception E_AddingTag1) {
+                Console.WriteLine(E_AddingTag1);
+                DialogResult dialogResult = MessageBox.Show("You didn't add a Tag", "Tag Adding Error", MessageBoxButtons.OK);
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ namespace KassenProgram.Utils {
         public static string[] stack;
         public static void ReadJSON(string JSNDBFile) {
             if (File.Exists(JSNDBFile)) {
-                string[] b = new string[10000];
+                string[] b = new string[1000];
                 StreamReader sr = new StreamReader(JSNDBFile);
                 
                 //read the file
