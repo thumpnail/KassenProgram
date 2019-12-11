@@ -1,0 +1,10 @@
+
+
+Date:2019-12-06 14:30:30,410
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.SyncfusionAssemblyReference.SyncfusionAssemblyReferencePackage                         [(null)]
+Message:System.IndexOutOfRangeException: Der Index war auﬂerhalb des Arraybereichs.
+   bei System.Array.InternalGetReference(Void* elemRef, Int32 rank, Int32* pIndices)
+   bei System.Array.GetValue(Int32 index)
+   bei Microsoft.SyncfusionAssemblyReference.SyncfusionAssemblyReferencePackage.SyncfusionAddreferences_BeforeQueryStatus(Object sender, EventArgs e) in D:\Git\RP\vext_reference_manager\SyncfusionAssemblyReference\SyncfusionAssemblyReference.cs:Zeile 265.
