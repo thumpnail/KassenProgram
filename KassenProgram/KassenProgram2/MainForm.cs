@@ -259,26 +259,5 @@ namespace KassenProgram {
             CalculateForm calculateForm = new CalculateForm();
             calculateForm.Show();
         }
-
-        private void buttonCMD_Click(object sender, EventArgs e) {
-            Console.WriteLine("Command mode activated... Exit with q");
-            while (true) {
-                Console.Write("CMD:> ");
-                string input = Console.ReadLine();
-                if (input.Equals("q")) {
-                    break;
-                } else if(input.Equals("clear")) {
-                    Console.WriteLine("Do you want to delete all elements in the list? (yes, no)");
-                    if (Console.ReadLine().Contains("yes")) {
-                        //call clear all
-                        ProductDB.ProductList.Clear();
-                        UpdateListView();
-                        Console.WriteLine("List Cleared");
-                    } else {
-                        Console.WriteLine("Nothing deleted");
-                    }
-                }
-            }
-        }
     }
 }

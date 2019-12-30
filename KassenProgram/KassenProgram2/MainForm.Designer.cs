@@ -1,7 +1,4 @@
-﻿using System.Windows.Forms;
-using System;
-
-namespace KassenProgram {
+﻿namespace KassenProgram {
     partial class MainForm {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +42,6 @@ namespace KassenProgram {
             this.label5 = new System.Windows.Forms.Label();
             this.buttonCalc = new System.Windows.Forms.Button();
             this.comboBoxSelectDateType = new System.Windows.Forms.ComboBox();
-            this.buttonCMD = new System.Windows.Forms.Button();
             // 
             // buttonAddProduct
             // 
@@ -108,7 +104,7 @@ namespace KassenProgram {
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(1226, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.Size = new System.Drawing.Size(87, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "Search Section:";
             // 
@@ -117,7 +113,7 @@ namespace KassenProgram {
             this.comboBoxSelectColum.FormattingEnabled = true;
             this.comboBoxSelectColum.Location = new System.Drawing.Point(1226, 170);
             this.comboBoxSelectColum.Name = "comboBoxSelectColum";
-            this.comboBoxSelectColum.Size = new System.Drawing.Size(202, 28);
+            this.comboBoxSelectColum.Size = new System.Drawing.Size(202, 23);
             this.comboBoxSelectColum.TabIndex = 8;
             // 
             // textSearchField
@@ -125,7 +121,7 @@ namespace KassenProgram {
             this.textSearchField.Location = new System.Drawing.Point(1226, 204);
             this.textSearchField.Name = "textSearchField";
             this.textSearchField.PlaceholderText = "Search Field";
-            this.textSearchField.Size = new System.Drawing.Size(202, 27);
+            this.textSearchField.Size = new System.Drawing.Size(202, 23);
             this.textSearchField.TabIndex = 9;
             // 
             // buttonReset
@@ -153,7 +149,7 @@ namespace KassenProgram {
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(1226, 345);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(38, 15);
             this.label2.TabIndex = 12;
             this.label2.Text = "From:";
             // 
@@ -162,7 +158,7 @@ namespace KassenProgram {
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(1226, 398);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 20);
+            this.label3.Size = new System.Drawing.Size(22, 15);
             this.label3.TabIndex = 13;
             this.label3.Text = "To:";
             // 
@@ -170,7 +166,7 @@ namespace KassenProgram {
             // 
             this.dateTimePickerFrom.Location = new System.Drawing.Point(1226, 368);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(202, 27);
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(202, 23);
             this.dateTimePickerFrom.TabIndex = 14;
             this.dateTimePickerFrom.ValueChanged += new System.EventHandler(this.dateTimePickerFrom_ValueChanged);
             // 
@@ -178,7 +174,7 @@ namespace KassenProgram {
             // 
             this.dateTimePickerTo.Location = new System.Drawing.Point(1226, 421);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
-            this.dateTimePickerTo.Size = new System.Drawing.Size(202, 27);
+            this.dateTimePickerTo.Size = new System.Drawing.Size(202, 23);
             this.dateTimePickerTo.TabIndex = 15;
             this.dateTimePickerTo.ValueChanged += new System.EventHandler(this.dateTimePickerTo_ValueChanged);
             // 
@@ -197,7 +193,7 @@ namespace KassenProgram {
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(1236, 274);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(183, 20);
+            this.label4.Size = new System.Drawing.Size(152, 15);
             this.label4.TabIndex = 17;
             this.label4.Text = "_____________________________";
             // 
@@ -206,7 +202,7 @@ namespace KassenProgram {
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(1236, 491);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(183, 20);
+            this.label5.Size = new System.Drawing.Size(152, 15);
             this.label5.TabIndex = 17;
             this.label5.Text = "_____________________________";
             // 
@@ -225,25 +221,14 @@ namespace KassenProgram {
             this.comboBoxSelectDateType.FormattingEnabled = true;
             this.comboBoxSelectDateType.Location = new System.Drawing.Point(1226, 314);
             this.comboBoxSelectDateType.Name = "comboBoxSelectDateType";
-            this.comboBoxSelectDateType.Size = new System.Drawing.Size(202, 28);
+            this.comboBoxSelectDateType.Size = new System.Drawing.Size(202, 23);
             this.comboBoxSelectDateType.TabIndex = 19;
-            // 
-            // buttonCMD
-            // 
-            this.buttonCMD.Location = new System.Drawing.Point(1334, 725);
-            this.buttonCMD.Name = "buttonCMD";
-            this.buttonCMD.Size = new System.Drawing.Size(94, 34);
-            this.buttonCMD.TabIndex = 20;
-            this.buttonCMD.Text = "CMD Mode";
-            this.buttonCMD.UseVisualStyleBackColor = true;
-            this.buttonCMD.Click += new System.EventHandler(this.buttonCMD_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 775);
-            this.Controls.Add(this.buttonCMD);
             this.Controls.Add(this.comboBoxSelectDateType);
             this.Controls.Add(this.buttonCalc);
             this.Controls.Add(this.label4);
@@ -294,6 +279,5 @@ namespace KassenProgram {
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonCalc;
         private System.Windows.Forms.ComboBox comboBoxSelectDateType;
-        private Button buttonCMD;
     }
 }
