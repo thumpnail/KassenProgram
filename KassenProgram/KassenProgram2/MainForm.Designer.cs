@@ -66,7 +66,7 @@
             this.listView2.MultiSelect = false;
             this.listView2.Name = "mainListView";
             this.listView2.Size = new System.Drawing.Size(1203, 775);
-            this.listView2.TabIndex = 3;
+            this.listView2.TabIndex = 3; 
             this.listView2.UseCompatibleStateImageBehavior = false;
             // 
             // buttonViewSelected
